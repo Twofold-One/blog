@@ -23,7 +23,7 @@ const happy = true;
 const finished = true;
 const goal = 3;
 
-const skillColor = "navy";
+const skillColor = "black";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
@@ -41,19 +41,22 @@ const textCase = "uppercase";
       text-transform: var(--textCase);
     }
   </style>
+  <div>
+    <h2>Here's I'm trying out Astro</h2>
+    <p>Here are a few facts about me:</p>
+    <ul>
+      <li>My name is {identity.firstName}.</li>
+      <li>I am a {identity.occupation}.</li>
+    </ul>
+  </div>
+  <div>
+    <p>My skills are:</p>
+    <ul>
+      {skills.map((skill) => <li class="skill">{skill}</li>)}
+    </ul>
+  </div>
 
-  <h2>Here's I'm trying out Astro</h2>
-  <p>Here are a few facts about me:</p>
-  <ul>
-    <li>My name is {identity.firstName}.</li>
-    <li>I am a {identity.occupation}.</li>
-  </ul>
-  <p>My skills are:</p>
-  <ul>
-    {skills.map((skill) => <li class="skill">{skill}</li>)}
-  </ul>
-
-  {happy && <p>I am happy to be learning Astro!</p>}
+  <!-- {happy && <p>I am happy to be learning Astro!</p>}
   {finished && <p>I finished tutorial!</p>}
   {
     goal === 3 ? (
@@ -61,5 +64,5 @@ const textCase = "uppercase";
     ) : (
       <p>My goal is not 3 days.</p>
     )
-  }
+  } -->
 </BaseLayout>

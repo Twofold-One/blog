@@ -12,13 +12,13 @@ body {
 }
 
 body {
-  background-color: #f1f5f9;
+  background-color: #f5f5f5;
   font-family: sans-serif;
   margin: 0 auto;
   width: 100%;
-  max-width: 80ch;
-  padding: 1rem;
   line-height: 1.5;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -26,18 +26,42 @@ h1 {
   font-size: 2.5rem;
 }
 
-/* nav styles */
-.hamburger {
-  padding-right: 20px;
-  cursor: pointer;
+.content {
+  margin: 2% 5%;
+  flex: 1 0 auto;
 }
 
-.hamburger .line {
-  display: block;
-  width: 40px;
-  height: 5px;
-  margin-bottom: 10px;
-  background-color: #ceceec;
+button {
+  background-color: #39796b;
+  color: white;
+  padding: 7px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 10px 0;
+  opacity: 95%;
+}
+
+button:hover {
+  opacity: 100%;
+}
+button:active {
+  transform: scale(1.1);
+}
+
+/* nav styles */
+.hamburger {
+  padding: 0 10px;
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.hamburger i {
+  color: white;
+  font-size: 1.5rem;
 }
 
 .nav-links {
@@ -49,9 +73,10 @@ h1 {
 }
 
 .nav-links a {
+  color: white;
   display: block;
   text-align: center;
-  padding: 10px 0;
+  padding: 5px 0;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -60,7 +85,7 @@ h1 {
 
 .nav-links a:hover,
 a:focus {
-  text-shadow: 0 5px 5px #ceceec;
+  text-shadow: 0 0 5px #ceceec;
 }
 
 .expanded {
@@ -88,10 +113,10 @@ a:focus {
 
 /* dark mode */
 .dark body {
-  background-color: #0d0950;
-  color: #fff;
+  background-color: #00251a;
+  color: white;
 }
 
 .dark .nav-links a {
-  color: #fff;
+  color: white;
 }
