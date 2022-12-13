@@ -9,5 +9,12 @@ const { title, url } = Astro.props;
 <style>
   a {
     text-decoration: none;
+    color: inherit;
+    transition: text-shadow 0.5s;
+  }
+
+  a:hover {
+    text-shadow: 0 0 5px #39796b;
+    font-weight: bold;
   }
 </style>

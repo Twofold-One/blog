@@ -1,25 +1,47 @@
 ---
 import Social from "./Social.astro";
+
+const dayOfWeekName = new Date().toLocaleString("default", {
+  weekday: "long",
+});
 ---
 
 <style>
   footer {
     background-color: #39796b;
+    color: white;
     display: flex;
-    justify-content: center;
-    gap: 1rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
     margin-top: 2rem;
     flex-shrink: 0;
+  }
+  div {
+    margin: 0;
+    padding: 0;
+    opacity: 80%;
+    margin: 0.5rem 1rem;
+  }
+  div a {
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .link:hover {
+    text-shadow: 0 0 5px white;
   }
 </style>
 
 <footer>
-  <Social
-    platform="github"
-    username="twofold-one"
-    iconClass="fa-brands fa-github"
-  />
   <div>
-    <h2>Twofold-One</h2>
+    <Social
+      platform="github"
+      username="twofold-one"
+      iconClass="fa-brands fa-github"
+    />
+    <p>© Copyright 2022 Twofold-One (Evan Geras)</p>
+    <p class="link"><a href="/disclaimer/">Disclaimer</a></p>
   </div>
+  <div id="weekDay">Enjoy the rest of your {dayOfWeekName}!</div>
 </footer>

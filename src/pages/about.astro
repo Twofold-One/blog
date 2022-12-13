@@ -23,34 +23,35 @@ const happy = true;
 const finished = true;
 const goal = 3;
 
-const skillColor = "black";
 const fontWeight = "bold";
 const textCase = "uppercase";
 ---
 
 <BaseLayout pageTitle={pageTitle}>
-  <style define:vars={{ skillColor, fontWeight, textCase }}>
+  <style define:vars={{ fontWeight, textCase }}>
     h1 {
       color: purple;
       font-size: 4rem;
     }
 
     .skill {
-      color: var(--skillColor);
       font-weight: var(--fontWeight);
       text-transform: var(--textCase);
     }
+
+    ul {
+      list-style-position: inside;
+    }
+
+    div {
+      margin: 10px auto;
+    }
   </style>
   <div>
-    <h2>Here's I'm trying out Astro</h2>
-    <p>Here are a few facts about me:</p>
-    <ul>
-      <li>My name is {identity.firstName}.</li>
-      <li>I am a {identity.occupation}.</li>
-    </ul>
+    <p>My name is {identity.firstName}. I am a {identity.occupation}.</p>
   </div>
   <div>
-    <p>My skills are:</p>
+    <p>My skills:</p>
     <ul>
       {skills.map((skill) => <li class="skill">{skill}</li>)}
     </ul>

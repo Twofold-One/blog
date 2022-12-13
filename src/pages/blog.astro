@@ -6,8 +6,12 @@ const allPosts = await Astro.glob("../pages/posts/*.md");
 const pageTitle = "Blog";
 ---
 
+<style>
+  ul {
+    list-style-position: inside;
+  }
+</style>
 <BaseLayout pageTitle={pageTitle}>
-  <p>Blog content here</p>
   <ul>
     {
       allPosts.map((post) => (

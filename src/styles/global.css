@@ -9,6 +9,7 @@
 html,
 body {
   min-height: 100vh;
+  transition: color 0.5s, background-color 0.5s;
 }
 
 body {
@@ -40,6 +41,7 @@ button {
   cursor: pointer;
   margin: 10px 0;
   opacity: 95%;
+  transition: opacity 2s;
 }
 
 button:hover {
@@ -81,6 +83,7 @@ button:active {
   font-size: 1.2rem;
   font-weight: bold;
   text-transform: uppercase;
+  transition: text-shadow 0.5s ease-out;
 }
 
 .nav-links a:hover,
