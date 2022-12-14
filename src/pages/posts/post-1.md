@@ -7,6 +7,7 @@ author: "Twofold-One (Evan)"
 image:
   url: "https://astro.build/assets/press/full-logo-light.svg"
   alt: "The Astro logo with the word One."
+  desc: "Astro Logo"
 tags: ["astro", "blogging"]
 ---
 

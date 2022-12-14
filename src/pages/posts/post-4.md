@@ -6,6 +6,7 @@ description: "This post will show up on its own!"
 image:
   url: "https://astro.build/assets/press/simple-full-logo-dark.svg"
   alt: "Earth seen from space."
+  desc: "Earth seen from space"
 pubDate: 2022-12-10
 tags: ["astro", "successes"]
 ---

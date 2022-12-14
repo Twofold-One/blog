@@ -31,6 +31,10 @@ const dayOfWeekName = new Date().toLocaleString("default", {
   .link:hover {
     text-shadow: 0 0 5px white;
   }
+
+  .myname {
+    font-family: "Accuratist", sans-serif;
+  }
 </style>
 
 <footer>
@@ -40,7 +44,7 @@ const dayOfWeekName = new Date().toLocaleString("default", {
       username="twofold-one"
       iconClass="fa-brands fa-github"
     />
-    <p>© Copyright 2022 Twofold-One (Evan Geras)</p>
+    <p>© Copyright 2022 <span class="myname">Twofold-One (Evan Geras)</span></p>
     <p class="link"><a href="/disclaimer/">Disclaimer</a></p>
   </div>
   <div id="weekDay">Enjoy the rest of your {dayOfWeekName}!</div>

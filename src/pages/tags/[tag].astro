@@ -25,7 +25,7 @@ const { posts } = Astro.props;
 ---
 
 <BaseLayout pageTitle={tag}>
-  <p>Posts tagged with {tag}</p>
+  <p>Posts tagged with <i>{tag}</i>:</p>
   <ul>
     {
       posts.map((post) => (
@@ -34,3 +34,13 @@ const { posts } = Astro.props;
     }
   </ul>
 </BaseLayout>
+
+<style>
+  p {
+    margin: 10px 0;
+  }
+
+  ul {
+    list-style-position: inside;
+  }
+</style>

@@ -1,9 +1,18 @@
+@font-face {
+  font-family: "Accuratist";
+  src: url("/fonts/Accuratist.ttf") format("ttf");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 *,
 *::before,
 *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 html,
