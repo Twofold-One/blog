@@ -1,5 +1,6 @@
 ---
 import BaseLayout from "./BaseLayout.astro";
+import "../styles/content.css";
 const { frontmatter } = Astro.props;
 ---
 
@@ -8,7 +9,9 @@ const { frontmatter } = Astro.props;
     <div class="postInfo">
       <p class="desc"><em>{frontmatter.description}</em></p>
       <p class="pubDate">Published on: {frontmatter.pubDate.slice(0, 10)}</p>
-      <p class="author">Written by {frontmatter.author}</p>
+      <p class="author">
+        Written by <span class="nickname">{frontmatter.author}</span>
+      </p>
     </div>
     <figure>
       <img
@@ -43,44 +46,22 @@ const { frontmatter } = Astro.props;
     margin: 1rem 0;
   }
 
-  .desc {
-    grid-area: desc;
-  }
-
-  .pubDate {
-    grid-area: pubDate;
-  }
-
+  .pubDate,
   .author {
-    grid-area: author;
+    opacity: 50%;
   }
 
-  .postInfo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas:
-      "desc desc"
-      "pubDate author";
-    justify-self: center;
+  .nickname {
+    font-family: "Accuratist", sans-serif;
+    text-transform: uppercase;
   }
-
-  .postInfo p {
-    opacity: 70%;
-    padding: 0.5rem 0.5rem 0.5rem 0;
-  }
-
   figure {
     diplay: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: auto;
-    padding: 20px;
-  }
-
-  img {
-    margin: 10px;
+    padding: 10px;
   }
 
   figcaption {
@@ -115,10 +96,5 @@ const { frontmatter } = Astro.props;
 
   .postContent {
     text-align: justify;
-  }
-
-  .postContent ol {
-    list-style-position: inside;
-    background-color: black;
   }
 </style>

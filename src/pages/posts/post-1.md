@@ -22,3 +22,4 @@ Welcome to the _blog_ about learning Astro!
 ## What's next
 
 I'll finish Astro tutorial.
+
